@@ -10,6 +10,7 @@ public class ActivitiesController(AppDbContext context) : BaseAPIController
     [HttpGet]
     public async Task<ActionResult<List<Activity>>> GetActivities()
     {
+        Console.Write("Here");
         return await context.Activities.ToListAsync();
     }
 
